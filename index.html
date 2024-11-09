@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Warning</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: black;
+      color: red;
+      font-family: Arial, sans-serif;
+      font-size: 2em;
+      text-align: center;
+    }
+    .blinking {
+      animation: blink 1s steps(2, start) infinite;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <p class="blinking">WARNING: UNAUTHORIZED ACCESS DETECTED</p>
+    <p>All data on this device is now being transferred...</p>
+    <p>Attempting to delete system files...</p>
+    <p class="blinking">Countdown: 10... 9... 8...</p>
+  </div>
+  <script>
+    setTimeout(() => alert('All data has been transferred'), 5000);
+  </script>
+</body>
+</html>
